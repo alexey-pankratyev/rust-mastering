@@ -1,6 +1,15 @@
 use std::io;
 
 fn main() {
+    const fun: u32 = 1;
+    if fun == 1 {
+        array_loop()
+    } else if fun == 2 {
+        if_loop()
+    }    
+}
+
+fn if_loop() {
     let mut counter = 0;
     let result =  loop {
         println!("Please input your number."); 
@@ -35,5 +44,15 @@ fn main() {
         }
     };
     println!("The counter reached limits {result}");
+}
 
+fn array_loop(){
+    let a = [10, 20, 30, 40, 50];
+    for index in a {
+        println!("the value is: {index}");
+    }
+    for number in (1..4).rev() {
+        println!("{number}!");
+    }
+    println!("LIFTOFF!!!");
 }
